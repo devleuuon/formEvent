@@ -1,0 +1,210 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+body {
+    background: #D9D9D9;
+    font-family: 'Poppins', sans-serif;
+}
+
+h1, h2 {
+    font-family: 'Archivo', sans-serif;
+}
+
+body::before {
+    content: '';
+    background-color: #121214;
+    width: 100%;
+    height: 368px;
+    position: fixed;
+    top: 0;
+    z-index: -1;
+}
+
+header {
+    width: 736px;
+    height: 160px;
+    margin: 80px auto 42px ;
+    text-align: start;
+}
+
+h1 {
+    width: 319px;
+    height: 84px;
+    font-size: 36px;
+    color: white;
+    margin-bottom: 20px;
+    line-height: 42px;
+}
+
+p {
+    width: 284px;
+    height: 52px;
+    font-size: 16px;
+    color: #42D3FF;
+    line-height: 26px;
+}
+
+form {
+    width: 736px;
+    height: 1430px;
+    background-color: #FAFAFC;
+    margin: auto;
+    padding: 64px;
+    border-radius: 8px 8px 0 0;
+}
+
+h2 {
+    color: #32264D;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #E6E6F0;
+    margin-bottom: 24px;
+}
+
+.margin-h2 {
+    margin: 48px 0 24px;
+}
+
+input {
+    margin: 8px 0 24px;
+    width: 608px;
+    height: 56px;
+    padding: 24px;
+    border: 1px solid #E6E6F0;
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+}
+
+label {
+    color: #4E4958;
+    line-height: 24px;
+}
+
+span {
+    color: #C1BCCC;
+    font-size: 12px;
+    line-height: 20px;
+    margin-left: 12px;
+}
+
+#number {
+    border: 1px solid #FF1010;
+}
+
+#info-extras {
+    width: 608px;
+    height: 168px;
+}
+
+#category {
+    margin: 8px 0 24px;
+    width: 608px;
+    height: 56px;
+    padding: 18px;
+    border: 1px solid #E6E6F0;
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    appearance: none;
+
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_1_54)'%3E%3Cpath d='M8 10L12 14L16 10' stroke='%239C98A6' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_1_54'%3E%3Crect width='24' height='24' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat; /*convertido pelo base64 to svg https://yoksel.github.io/url-encoder/*/
+    background-position: right 24px top 50%;
+}
+
+placeholder {
+    color: #C1BCCC;
+    font-size: 16px;
+}
+
+/* */
+
+.check-box {
+    position: relative;
+}
+
+.check-box label {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    width: 568px;
+    height: 24px;
+    margin-bottom: 16px;
+}
+
+.check-box input {
+    position: absolute; /*absoluto sobre check-box: relative */
+    top: 0;
+    left: 0;
+    width: 24px;
+    height: 24px;
+    z-index: -1;
+}
+
+.check-box label::before {
+    content: '';
+    width: 24px;
+    height: 24px;
+    border-radius: 8px;
+    border: 1px solid #E6E6F0;
+    display: block;
+}
+
+.check-box input:checked + label::before {
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_2611_23)'%3E%3Cpath d='M9 16.17L4.83 12L3.41 13.41L9 19L21 7L19.59 5.59L9 16.17Z' fill='%2342D3FF'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_2611_23'%3E%3Crect width='24' height='24' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+    /* convertido pelo base64 to svg (https://yoksel.github.io/url-encoder/)*/
+}
+
+.check-box input:focus + label::before {
+    outline: 1px solid black; /* para sublinhar campo selecionado, ajuda na questão de acessibilidade*/
+}
+
+.input-date {
+    display: flex;
+    gap: 20px;
+}
+
+.date input {
+    width: 312px;
+}
+
+.time input {
+    width: 128px;
+}
+
+
+footer {
+    width: 736px;
+    height: 136px;
+    background: #F0F0F4;
+    border-radius: 0 0 8px 8px;
+    margin: 0 auto 91px;
+    border-top: 1px solid#D6D6D6;
+}
+
+button {
+    width: 608px;
+    height: 56px;
+    margin: 40px 65px;
+    padding: 15px 40px;
+    background-color: #04D361;
+    font-family: 'Archivo', sans-serif;
+    font-size: 16px;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    line-height: 26px;
+    cursor: pointer;
+}
+
+input:invalid {
+    border: 1px solid red;
+}
+
+input:valid {
+    border: 1px solid green;
+}
